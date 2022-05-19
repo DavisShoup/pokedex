@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show Page</title>
-</head>
+<%- include('./partials/head.ejs') %>
 <body>
-    <a href="/pokedex"><button>BACK</button></a>
+    <%- include('./partials/header.ejs') %>
             <h1><%= data.name %></h1>
-            <img src="<%= data.img%>">
-            <p>ID: <%= data.id %>
-            <ul>TYPE
-                <li> <%= data.type %></li>
-            </ul>
-            <ul>STATS
-                <li>HP: <%= data.stats.hp %></li>
-                <li>ATTACK: <%= data.stats.attack %></li>
-                <li>DEFENSE: <%= data.stats.defense %></li>
-            </ul>
+                <a href="/pokedex"><img src="<%= data.img%>"></a>
+                <p>ID: <%= data.id %>
+                <ul>TYPE
+                    <li> <%= data.type %></li>
+                </ul>
+                <ul>STATS
+                    <li>HP: <%= data.stats.hp %></li>
+                    <li>ATTACK: <%= data.stats.attack %></li>
+                    <li>DEFENSE: <%= data.stats.defense %></li>
+                </ul>
     
 </body>
 </html>

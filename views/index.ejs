@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
-</head>
+    <%- include('./partials/head.ejs') %>
 <body>
-    <a href="/pokedex/new"><button>Add Pokemon</button></a>
+    <div class="container">
+    <%- include('./partials/header.ejs') %>
     <% for (let i = 0; i < data.length; i++) { %>
-        <p>
-            <img src="<%= data[i].img%>">
-            <a href="/pokedex/<%= i %>"><%= data[i].name %></a>
+        <div class="pokemon">
+            <a href="/pokedex/<%= i %>"><img class="image" src="<%= data[i].img%>"></a>
+            <a class="name" href="/pokedex/<%= i %>"><%= data[i].name %></a>
             <form action="/pokedex/<%=i; %>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE" />
+            <input class="formbutton" type="submit" value="Delete" />
             </form>
-            <a href="/pokedex/<%=i; %>/edit"><button>Edit Pokemon</button></a>
-        </p>
+            <a href="/pokedex/<%=i; %>/edit"><button>Edit</button></a>
+        </div>
     <% } %>
+    </div>
 </body>
 </html>

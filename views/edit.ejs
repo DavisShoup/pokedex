@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Edit Pokemon</title>
-    <link rel="stylesheet" href="/css/app.css" />
-  </head>
+<%- include('./partials/head.ejs') %>
   <body>
+    <%- include('./partials/header.ejs') %>
     <h1>Edit Pokemon</h1>
     <form action="/pokedex/<%=index%>?_method=PUT" method="POST">
-      <!--  NOTE: the form is pre-populated with values for the server-->
+        <img src="<%= data.img%>"><br/>
         Name: <input type="text" name="name"/> <br/>
         Type: <input type="text" name="type"/> <br/>
         HP: <input type="text" name="stats.hp"/><br/>
         ATTACK: <input type="text" name="stats.attack"/><br/>
         DEFENSE: <input type="text" name="stats.defense"/><br/>
-        <input type="submit" name="" value="Submit Changes" />
+        <input type="submit" name="" value="Submit" /><br/>
     </form>
-    <a href="/pokedex">Back to Pokedex</a>
   </body>
 </html>

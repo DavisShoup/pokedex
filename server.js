@@ -9,6 +9,7 @@ const { send } = require('express/lib/response');
 //MIDDLEWARE
 app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride("_method")) 
+app.use(express.static(__dirname + "/public"));
 
 //LISTEN
 app.listen(port, () =>{
@@ -28,32 +29,31 @@ app.get("/pokedex/new", (req,res) => {
 // DELETE
 
 app.delete("/pokedex/:index", (req, res) => {
-    Pokemon.splice(req.params.index, 1) //remove the item from the array
-    res.redirect("/pokedex") //redirect back to index route
+    Pokemon.splice(req.params.index, 1)
+    res.redirect("/pokedex") 
   })  
 
 // UPDATE
 
 app.put("/pokedex/:index", (req, res) => {
-    Pokemon[req.params.index] = req.body //in our fruits array, find the index that is specified in the url (:indexOfFruitsArray).  Set that element to the value of req.body (the input data)
-    res.redirect("/pokedex") //redirect to the index page
+    Pokemon[req.params.index] = req.body
+    res.redirect("/pokedex")
   })
 
 // CREATE
 app.post("/pokedex", (req, res) => {
     Pokemon.push(req.body)
-    res.redirect("/pokedex") //send the user back to /fruits
+    res.redirect("/pokedex")
   })
 
 // EDIT
 
 app.get("/pokedex/:index/edit", (req, res) => {
     res.render(
-      "edit.ejs", //render views/edit.ejs
+      "edit.ejs",
       {
-        //pass in an object that contains
-        data: Pokemon[req.params.index], //the fruit object
-        index: req.params.index, //... and its index in the array
+        data: Pokemon[req.params.index],
+        index: req.params.index,
       }
     )
   })

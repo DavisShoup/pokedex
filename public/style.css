@@ -1,0 +1,130 @@
+body {
+    background-color: blanchedalmond;
+    margin-top: 30px;
+    margin-right: 300px;
+    margin-left: 300px;
+}
+
+.pokemon {
+    border: solid #93c47d 6px;
+    border-radius: 5px;
+    border-style: double;
+    color:#93c47d;
+    font-family: 'Pokemon Solid', sans-serif;
+    background-color: rgba(156, 48, 48, 0.2);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header"
+    "main main main"
+    "main main main"
+    "main main main";
+    grid-gap: 1rem;
+}
+
+header {
+    font-family: 'Pokemon Solid', sans-serif;
+    border: solid #93c47d 6px;
+    background-color: rgba(156, 48, 48, 0.2);
+    border-style: double;
+    grid-area: header;
+    color: black;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2vh;
+    border-radius: 5px;
+    color: #93c47d;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.name {
+    grid-area: main;
+    z-index: 100;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    font-size: 2vh;
+}
+
+.image {
+    grid-area: main;
+    object-fit: cover;
+    width: 50%;
+    max-height: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input {
+    grid-area: main;
+    height: 43px;
+    width: 100px;
+    margin: auto;
+    border: solid #93c47d 2px;
+    color: #93c47d;
+    background-color: #f4f2ef;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button {
+    grid-area: main;
+    height: 43px;
+    width: 100px;
+    margin: auto;
+    border: solid #93c47d 2px;
+    color: #93c47d;
+    background-color: #f4f2ef;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Pokemon Solid', sans-serif;
+    color: #93c47d;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+button:hover {
+    background-color: #93c47d;
+    color: black;
+}
+
+.formbutton:hover {
+    background-color: #93c47d;
+    color: black;
+}
+
+.create {
+    border: solid #93c47d 6px;
+    border-radius: 5px;
+    border-style: double;
+    color:#93c47d;
+    font-family: 'Pokemon Solid', sans-serif;
+    background-color: rgba(156, 48, 48, 0.2);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

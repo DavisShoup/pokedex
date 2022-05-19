@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a Pokemon</title>
-</head>
+<%- include('./partials/head.ejs') %>
 <body>
-    <a href="/pokedex"><button>BACK</button></a>
+    <%- include('./partials/header.ejs') %>
+    <div class="create">
     <h1>Create a Pokemon</h1>
-    <form action="/pokedex" method="POST">
-        Name: <input type="text" name="name"/> <br/>
-        Type: <input type="text" name="type"/> <br/>
-        HP: <input type="text" name="stats.hp"/><br/>
-        ATTACK: <input type="text" name="stats.attack"/><br/>
-        DEFENSE: <input type="text" name="stats.defense"/><br/>
-        <input type="submit" value="Create Pokemon"/><br/>
-        <img src="https://res.cloudinary.com/lmn/image/upload/c_limit,h_360,w_640/e_sharpen:100/f_auto,fl_lossy,q_auto/v1/gameskinnyc/w/h/o/whos-that-pokemon-sirfetchd-b3795.jpg" name="img"/>
-    </form>
+    <a href="/pokedex"><img src="https://res.cloudinary.com/lmn/image/upload/c_limit,h_360,w_640/e_sharpen:100/f_auto,fl_lossy,q_auto/v1/gameskinnyc/w/h/o/whos-that-pokemon-sirfetchd-b3795.jpg" name="img"/></a>
+    <table>
+        <form action="/pokedex" method="POST">
+            <td><input type="text" name="name" placeholder="Name" /> <br/></td>
+            <td><input type="text" name="type" placeholder="Type"/> <br/></td>
+            <td><input type="text" name="stats.hp" placeholder="Hp"/><br/></td>
+            <td><input type="text" name="stats.attack" placeholder="Attack"/><br/></td>
+            <td><input type="text" name="stats.defense" placeholder="Defense"/><br/></td>
+            <td><input class="formbutton" type="submit" value="Create"/><br/></td>
+        </form>
+    </table>
+</div>
     
+</div>
 </body>
 </html>
