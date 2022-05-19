@@ -7,13 +7,19 @@
     <title>Index Page</title>
 </head>
 <body>
+    
     <% for (let i = 0; i < data.length; i++) { %>
         <p>
-            <a href="/pokedex/<%= i %>">
-                <%= data[i].name %>
-                <img src="<%= data[i].img%>">
-                <%= data[i].type %>
-            </a>
+            <a href="/pokedex/<%= i %>"><%= data[i].name %></a>
+            <img src="<%= data[i].img%>">
+            <ul>TYPE
+                <li> <%= data[i].type %></li>
+            </ul>
+            <ul>STATS
+                <li>HP: <%= data[i].stats.hp %></li>
+                <li>ATTACK: <%= data[i].stats.attack %></li>
+                <li>DEFENSE: <%= data[i].stats.defense %></li>
+            </ul>
         </p>
     <% } %>
 </body>
