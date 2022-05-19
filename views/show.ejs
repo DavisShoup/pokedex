@@ -7,7 +7,18 @@
     <title>Show Page</title>
 </head>
 <body>
-    <h1><%= data.name %></h1>
+    <a href="/pokedex"><button>BACK</button></a>
+            <h1><%= data.name %></h1>
+            <img src="<%= data.img%>">
+            <p>ID: <%= data.id %>
+            <ul>TYPE
+                <li> <%= data.type %></li>
+            </ul>
+            <ul>STATS
+                <li>HP: <%= data.stats.hp %></li>
+                <li>ATTACK: <%= data.stats.attack %></li>
+                <li>DEFENSE: <%= data.stats.defense %></li>
+            </ul>
     
 </body>
 </html>
