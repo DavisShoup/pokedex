@@ -116,9 +116,15 @@ h1 {
     justify-content: center;
     align-items: center;
     margin: auto;
+    flex-direction: row;
 }
 
 .formbutton:hover {
+    background-color: #93c47d;
+    color: black;
+}
+
+.formbutton1:hover {
     background-color: #93c47d;
     color: black;
 }
@@ -132,5 +138,16 @@ h1 {
     background-color: rgba(156, 48, 48, 0.2);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     margin-top: 1em;
-    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-size: 2vh;
+}
+
+ul {
+    font-size: 2vh;
 }
