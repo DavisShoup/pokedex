@@ -1,0 +1,22 @@
+//edit.ejs
+<td><input type="text" name="hp" placeholder="HP"/><br/></td>
+<td><input type="text" name="attack" placeholder="Attack"/><br/></td>
+<td><input type="text" name="defense" placeholder="Defense"/><br/></td>
+
+//show.ejs
+STATS
+<li>HP: <%= data.stats.hp %></li>
+<li>ATTACK: <%= data.stats.attack %></li>
+<li>DEFENSE: <%= data.stats.defense %></li>
+
+//new.ejs
+<td><input type="text" name="hp" placeholder="Hp"/><br/></td>
+<td><input type="text" name="attack" placeholder="Attack"/><br/></td>
+<td><input type="text" name="defense" placeholder="Defense"/><br/></td>
+
+//server.js 
+// UPDATE
+Pokemon[req.params.index].stats.hp = req.body.hp
+Pokemon[req.params.index].stats.attack = req.body.attack
+Pokemon[req.params.index].stats.defense= req.body.defense
+

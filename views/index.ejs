@@ -9,7 +9,7 @@
             <a href="/pokedex/<%= i %>"><img class="image" src="<%= data[i].img%>"></a>
             <a class="name" href="/pokedex/<%= i %>"><%= data[i].name %></a>
             <form action="/pokedex/<%=i; %>?_method=DELETE" method="POST">
-            <input class="formbutton" type="submit" value="Delete" />
+            <input class="deletebutton" type="submit" value="Delete" />
             </form>
             <a href="/pokedex/<%=i; %>/edit"><button class="formbutton">Edit</button></a>
         </div>

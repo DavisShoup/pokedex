@@ -83,7 +83,7 @@ input {
     grid-area: main;
     font-size: 1vh;
     height: 3vh;
-    width: 6vh;
+    width: 4vw;
     margin: auto;
     border: solid #93c47d 2px;
     color: #93c47d;
@@ -96,7 +96,7 @@ button {
     grid-area: main;
     font-size: 1vh;
     height: 3vh;
-    width: 6vh;
+    width: 4vw;
     margin: auto;
     border: solid #93c47d 2px;
     color: #93c47d;
@@ -116,7 +116,20 @@ h1 {
     justify-content: center;
     align-items: center;
     margin: auto;
-    flex-direction: row;
+}
+
+.deletebutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.deletebutton:hover {
+    background-color: #d18787;
+    color: black;
+    border-radius: 5px;
+    border: solid #d18787 2px;
 }
 
 .formbutton:hover {
@@ -124,9 +137,17 @@ h1 {
     color: black;
 }
 
-.formbutton1:hover {
+.formbutton1 {
     background-color: #93c47d;
     color: black;
+    font-size: 1vh;
+    height: 3.5vh;
+    width: 4vw;
+}
+
+.formbutton1:hover {
+    color: #93c47d;
+    background-color: #f4f2ef;
 }
 
 .create {
@@ -151,3 +172,9 @@ p {
 ul {
     font-size: 2vh;
 }
+
+.url {
+    height: 3vh;
+    width: 30.5vw;
+}
+

@@ -8,7 +8,10 @@
     <a href="/pokedex"><img src="<%= data.img%>"><br/></a>
     <table>
     <form action="/pokedex/<%=index%>?_method=PUT" method="POST">
-        <td><input type="text" name="name" placeholder="Name"/> <br/></td>
+        Img URL:</br>
+        <tr><input class="url" type="text" name="img" placeholder="Image URL" value="https://res.cloudinary.com/lmn/image/upload/c_limit,h_360,w_640/e_sharpen:100/f_auto,fl_lossy,q_auto/v1/gameskinnyc/w/h/o/whos-that-pokemon-sirfetchd-b3795.jpg"/></tr>
+        <td><input type="text" name="name" placeholder="Name"/><br/></td>
+        <td><input type="text" name="id" placeholder="I.D."/> <br/></td>
         <td><input type="text" name="type" placeholder="Type"/> <br/></td>
         <td><input type="text" name="hp" placeholder="HP"/><br/></td>
         <td><input type="text" name="attack" placeholder="Attack"/><br/></td>

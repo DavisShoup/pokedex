@@ -37,6 +37,7 @@ app.delete("/pokedex/:index", (req, res) => {
 
 app.put("/pokedex/:index", (req, res) => {
     Pokemon[req.params.index].name = req.body.name
+    Pokemon[req.params.index].id = req.body.id
     Pokemon[req.params.index].type = req.body.type
     Pokemon[req.params.index].stats.hp = req.body.hp
     Pokemon[req.params.index].stats.attack = req.body.attack
@@ -46,7 +47,19 @@ app.put("/pokedex/:index", (req, res) => {
 
 // CREATE
 app.post("/pokedex", (req, res) => {
-    Pokemon.unshift(req.body)
+    console.log(req.body);
+    const createPokemon = {
+      img: req.body.img,
+      name: req.body.name,
+      id: req.body.id,
+      type: req.body.type,
+      stats: {
+        hp: req.body.hp,
+        attack: req.body.attack,
+        defense: req.body.defense,
+      }
+    }
+    Pokemon.unshift(createPokemon)
     res.redirect("/pokedex")
   })
 
