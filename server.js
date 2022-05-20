@@ -8,7 +8,7 @@ const { send } = require('express/lib/response');
 
 //MIDDLEWARE
 app.use(express.urlencoded({ extended: false }))
-app.use(methodOverride("_method")) 
+app.use(methodOverride("_method"))
 app.use(express.static(__dirname + "/public"));
 
 //LISTEN
@@ -42,8 +42,9 @@ app.put("/pokedex/:index", (req, res) => {
 
 // CREATE
 app.post("/pokedex", (req, res) => {
-    Pokemon.push(req.body)
+    Pokemon.unshift(req.body)
     res.redirect("/pokedex")
+    console.log(req.body.stats);
   })
 
 // EDIT
@@ -56,7 +57,7 @@ app.get("/pokedex/:index/edit", (req, res) => {
         index: req.params.index,
       }
     )
-  })
+})
 
 
 // SHOW

@@ -1,8 +1,8 @@
 body {
     background-color: blanchedalmond;
     margin-top: 30px;
-    margin-right: 300px;
-    margin-left: 300px;
+    margin-right: 250px;
+    margin-left: 250px;
 }
 
 .pokemon {
@@ -81,8 +81,9 @@ a {
 
 input {
     grid-area: main;
-    height: 43px;
-    width: 100px;
+    font-size: 1vh;
+    height: 3vh;
+    width: 6vh;
     margin: auto;
     border: solid #93c47d 2px;
     color: #93c47d;
@@ -93,8 +94,9 @@ input {
 
 button {
     grid-area: main;
-    height: 43px;
-    width: 100px;
+    font-size: 1vh;
+    height: 3vh;
+    width: 6vh;
     margin: auto;
     border: solid #93c47d 2px;
     color: #93c47d;
@@ -109,9 +111,11 @@ h1 {
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
-button:hover {
-    background-color: #93c47d;
-    color: black;
+.formbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
 
 .formbutton:hover {
@@ -127,4 +131,6 @@ button:hover {
     font-family: 'Pokemon Solid', sans-serif;
     background-color: rgba(156, 48, 48, 0.2);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    margin-top: 1em;
+    padding: 50px;
 }

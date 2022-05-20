@@ -3,9 +3,10 @@
 <%- include('./partials/head.ejs') %>
 <body>
     <%- include('./partials/header.ejs') %>
+    <div class="create">
             <h1><%= data.name %></h1>
                 <a href="/pokedex"><img src="<%= data.img%>"></a>
-                <p>ID: <%= data.id %>
+                <p>ID: <%= data.id %></p>
                 <ul>TYPE
                     <li> <%= data.type %></li>
                 </ul>
@@ -14,6 +15,6 @@
                     <li>ATTACK: <%= data.stats.attack %></li>
                     <li>DEFENSE: <%= data.stats.defense %></li>
                 </ul>
-    
+            </div>
 </body>
 </html>
